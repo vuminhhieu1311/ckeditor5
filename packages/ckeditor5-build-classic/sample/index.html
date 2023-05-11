@@ -23,6 +23,8 @@
 		<img src="../tests/manual/sample.jpg" alt="Autumn fields" />
 	</figure>
 
+	<span class="placeholder">huhu</span>
+
 	<p>You can use this sample to validate whether your <a href="https://ckeditor.com/docs/ckeditor5/latest/installation/advanced/alternative-setups/custom-builds.html">custom build</a> works fine.</p>
 </div>
 
@@ -31,6 +33,7 @@
 	ClassicEditor.create( document.querySelector( '#editor' ) )
 		.then( editor => {
 			window.editor = editor;
+			editor.execute('placeholder', { value: 'name' });
 		} )
 		.catch( error => {
 			console.error( 'There was a problem initializing the editor.', error );
