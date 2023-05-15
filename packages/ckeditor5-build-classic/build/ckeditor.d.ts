@@ -21,8 +21,11 @@ import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import Placeholder from './placeholder/placeholder';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
+import ImageResizeEditing from '@ckeditor/ckeditor5-image/src/imageresize/imageresizeediting';
+import ImageResizeHandles from '@ckeditor/ckeditor5-image/src/imageresize/imageresizehandles';
 export default class ClassicEditor extends ClassicEditorBase {
-    static builtinPlugins: (typeof Placeholder | typeof Essentials | typeof UploadAdapter | typeof Autoformat | typeof Bold | typeof Underline | typeof Strikethrough | typeof Italic | typeof CKBox | typeof CKFinder | typeof CloudServices | typeof EasyImage | typeof Heading | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof Link | typeof List | typeof Paragraph | typeof PasteFromOffice | typeof PictureEditing | typeof TextTransformation | typeof Font | typeof Alignment)[];
+    static builtinPlugins: (typeof Placeholder | typeof Essentials | typeof UploadAdapter | typeof Autoformat | typeof Bold | typeof Underline | typeof Strikethrough | typeof Italic | typeof CKBox | typeof CKFinder | typeof CloudServices | typeof EasyImage | typeof Heading | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof Link | typeof List | typeof Paragraph | typeof PasteFromOffice | typeof PictureEditing | typeof TextTransformation | typeof Font | typeof Alignment | typeof SimpleUploadAdapter | typeof ImageResizeEditing | typeof ImageResizeHandles)[];
     static defaultConfig: {
         toolbar: {
             items: string[];
