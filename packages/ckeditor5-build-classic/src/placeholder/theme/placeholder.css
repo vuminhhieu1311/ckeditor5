@@ -1,0 +1,29 @@
+.placeholder {
+    padding: 1px 2px;
+    outline-offset: -2px;
+    margin: 0 1px;
+	line-height: 20px;
+	color: #272727;
+	border: 1px solid #C9C9C9;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.placeholder::selection {
+    display: none;
+}
+
+.placeholder:before {
+    content: "[";
+    margin-right: 0.1rem;
+}
+
+.placeholder:after {
+    content: "]";
+    margin-left: 0.1rem;
+}
+
+.placeholder:before, .placeholder:after {
+    color: #00B14F;
+	font-weight: 700;
+}
