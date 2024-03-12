@@ -30,14 +30,22 @@
 
 <script src="../build/ckeditor.js"></script>
 <script>
-	ClassicEditor.create( document.querySelector( '#editor' ) )
-		.then( editor => {
-			window.editor = editor;
-			editor.execute('placeholder', { value: 'name' });
-		} )
-		.catch( error => {
-			console.error( 'There was a problem initializing the editor.', error );
-		} );
+	ClassicEditor.create( document.querySelector( '#editor' ), {
+		mention: {
+            feeds: [
+                {
+                    marker: '@',
+                    feed: [ '@Barney', '@Lily', '@Marry Ann', '@Marshall', '@Robin', '@Ted' ],
+                    minimumCharacters: 1
+                }
+            ]
+        }
+	}).then( editor => {
+		window.editor = editor;
+		editor.execute('placeholder', { value: 'name' });
+	}).catch( error => {
+		console.error( 'There was a problem initializing the editor.', error );
+	});
 </script>
 
 </body>

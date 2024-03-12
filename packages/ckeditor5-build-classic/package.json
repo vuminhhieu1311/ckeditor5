@@ -1,6 +1,6 @@
 {
   "name": "@hieu1311/ckeditor5-build-classic",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -61,11 +61,11 @@
   },
   "author": "CKSource (http://cksource.com/)",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "homepage": "https://github.com/vuminhhieu1311/ckeditor5",
+  "bugs": "https://github.com/vuminhhieu1311/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5.git",
+    "url": "https://github.com/vuminhhieu1311/ckeditor5",
     "directory": "packages/ckeditor5-build-classic"
   },
   "scripts": {

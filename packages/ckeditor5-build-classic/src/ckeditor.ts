@@ -34,6 +34,7 @@ import Placeholder from './placeholder/placeholder.js';
 import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Font } from '@ckeditor/ckeditor5-font';
 import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
+import { Mention } from '@ckeditor/ckeditor5-mention';
 
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = [
@@ -65,7 +66,8 @@ export default class ClassicEditor extends ClassicEditorBase {
 		Alignment,
 		SimpleUploadAdapter,
 		ImageResizeEditing,
-		ImageResizeHandles
+		ImageResizeHandles,
+		Mention
 	];
 
 	public static override defaultConfig = {
