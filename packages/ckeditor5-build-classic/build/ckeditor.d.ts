@@ -23,8 +23,9 @@ import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Font } from '@ckeditor/ckeditor5-font';
 import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 import { Mention } from '@ckeditor/ckeditor5-mention';
+import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
 export default class ClassicEditor extends ClassicEditorBase {
-    static builtinPlugins: (typeof TextTransformation | typeof Essentials | typeof SimpleUploadAdapter | typeof CKFinderUploadAdapter | typeof Paragraph | typeof Heading | typeof Autoformat | typeof Bold | typeof Italic | typeof Strikethrough | typeof Underline | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof ImageResizeEditing | typeof CloudServices | typeof CKBox | typeof CKFinder | typeof EasyImage | typeof Link | typeof List | typeof PasteFromOffice | typeof Alignment | typeof Font | typeof Mention | typeof ImageResizeHandles | typeof PictureEditing | typeof Placeholder)[];
+    static builtinPlugins: (typeof TextTransformation | typeof Essentials | typeof SimpleUploadAdapter | typeof CKFinderUploadAdapter | typeof Paragraph | typeof Heading | typeof Autoformat | typeof Bold | typeof Italic | typeof Strikethrough | typeof Underline | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof ImageResizeEditing | typeof CloudServices | typeof CKBox | typeof CKFinder | typeof EasyImage | typeof Link | typeof List | typeof PasteFromOffice | typeof Alignment | typeof Font | typeof Mention | typeof Table | typeof TableToolbar | typeof ImageResizeHandles | typeof PictureEditing | typeof Placeholder)[];
     static defaultConfig: {
         toolbar: {
             items: string[];

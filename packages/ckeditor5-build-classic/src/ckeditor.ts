@@ -35,6 +35,7 @@ import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Font } from '@ckeditor/ckeditor5-font';
 import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 import { Mention } from '@ckeditor/ckeditor5-mention';
+import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
 
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = [
@@ -67,7 +68,9 @@ export default class ClassicEditor extends ClassicEditorBase {
 		SimpleUploadAdapter,
 		ImageResizeEditing,
 		ImageResizeHandles,
-		Mention
+		Mention,
+		Table,
+		TableToolbar
 	];
 
 	public static override defaultConfig = {
@@ -77,7 +80,7 @@ export default class ClassicEditor extends ClassicEditorBase {
 				'|', 'heading', 'fontFamily',
 				'|', 'bold', 'italic', 'underline', 'strikethrough', 'fontColor',
 				'|', 'bulletedList', 'numberedList', 'alignment',
-				'|', 'uploadImage', 'link'
+				'|', 'uploadImage', 'insertTable', 'link'
 			]
 		},
 		image: {
