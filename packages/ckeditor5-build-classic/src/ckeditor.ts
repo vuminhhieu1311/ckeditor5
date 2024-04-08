@@ -5,6 +5,7 @@
 
 // The editor creator to use.
 import { ClassicEditor as ClassicEditorBase } from '@ckeditor/ckeditor5-editor-classic';
+import { InlineEditor as InlineEditorBase } from '@ckeditor/ckeditor5-editor-inline';
 
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { CKFinderUploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
@@ -37,63 +38,74 @@ import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 import { Mention } from '@ckeditor/ckeditor5-mention';
 import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
 
-export default class ClassicEditor extends ClassicEditorBase {
-	public static override builtinPlugins = [
-		Essentials,
-		CKFinderUploadAdapter,
-		Autoformat,
-		Bold,
-		Underline,
-		Strikethrough,
-		Italic,
-		CKBox,
-		CKFinder,
-		CloudServices,
-		EasyImage,
-		Heading,
-		Image,
-		ImageCaption,
-		ImageStyle,
-		ImageToolbar,
-		ImageUpload,
-		Link,
-		List,
-		Paragraph,
-		PasteFromOffice,
-		PictureEditing,
-		TextTransformation,
-		Placeholder,
-		Font,
-		Alignment,
-		SimpleUploadAdapter,
-		ImageResizeEditing,
-		ImageResizeHandles,
-		Mention,
-		Table,
-		TableToolbar
-	];
+class ClassicEditor extends ClassicEditorBase {}
+class InlineEditor extends InlineEditorBase {}
 
-	public static override defaultConfig = {
-		toolbar: {
-			items: [
-				'undo', 'redo',
-				'|', 'heading', 'fontFamily',
-				'|', 'bold', 'italic', 'underline', 'strikethrough', 'fontColor',
-				'|', 'bulletedList', 'numberedList', 'alignment',
-				'|', 'uploadImage', 'insertTable', 'link'
-			]
-		},
-		image: {
-			toolbar: [
-				'imageStyle:inline',
-				'imageStyle:block',
-				'imageStyle:side',
-				'|',
-				'toggleImageCaption',
-				'imageTextAlternative'
-			]
-		},
-		// This value must be kept in sync with the language defined in webpack.config.js.
-		language: 'en'
-	};
-}
+const builtinPlugins = [
+	Essentials,
+	CKFinderUploadAdapter,
+	Autoformat,
+	Bold,
+	Underline,
+	Strikethrough,
+	Italic,
+	CKBox,
+	CKFinder,
+	CloudServices,
+	EasyImage,
+	Heading,
+	Image,
+	ImageCaption,
+	ImageStyle,
+	ImageToolbar,
+	ImageUpload,
+	Link,
+	List,
+	Paragraph,
+	PasteFromOffice,
+	PictureEditing,
+	TextTransformation,
+	Placeholder,
+	Font,
+	Alignment,
+	SimpleUploadAdapter,
+	ImageResizeEditing,
+	ImageResizeHandles,
+	Mention,
+	Table,
+	TableToolbar
+];
+
+const defaultConfig = {
+	toolbar: {
+		items: [
+			'undo', 'redo',
+			'|', 'heading', 'fontFamily',
+			'|', 'bold', 'italic', 'underline', 'strikethrough', 'fontColor',
+			'|', 'bulletedList', 'numberedList', 'alignment',
+			'|', 'uploadImage', 'insertTable', 'link'
+		]
+	},
+	image: {
+		toolbar: [
+			'imageStyle:inline',
+			'imageStyle:block',
+			'imageStyle:side',
+			'|',
+			'toggleImageCaption',
+			'imageTextAlternative'
+		]
+	},
+	// This value must be kept in sync with the language defined in webpack.config.js.
+	language: 'en'
+};
+
+ClassicEditor.builtinPlugins = builtinPlugins;
+ClassicEditor.defaultConfig = defaultConfig;
+InlineEditor.builtinPlugins = builtinPlugins;
+InlineEditor.defaultConfig = defaultConfig;
+
+export default {
+	ClassicEditor,
+	InlineEditor
+};
